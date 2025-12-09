@@ -1,3 +1,8 @@
-# vehicle-license-plate-detection-and-recognition
+# Vehicle License Plate Detection and Recognition using YOLO and EasyOCR
 The aim of this project is for detecting vehicle licence plates in images, videos and live camera streams using YOLOv11 and recognising and extracting characters of the registration number from the detected license plate using EasyOCR.
-#The dataset for training was sourced from Roboflow Universe which contains a host of datasets with annotated images very useful for various computer vision projects and workflows. The one used in this project is available at here https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/11 .
+# Data Source 📂
+The dataset for training was sourced from Roboflow Universe which contains a host of datasets with annotated images very useful for various computer vision projects and workflows. The one used in this project is available at here https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/11 . It contains 10125 images of annotated vehicle license plate images.
+# Training the model 📈  
+The YOLOv11 model by Ultralytics is trained on the COCO (Common Objects in Context) dataset which contains various images of various categories like cars, people etc which the model can detect directly in inference. The COCO dataset doesn't contain the class of licence plate for it's detection. The YOLOv11 model was trained using the above dataset in Google Colaboratory which is a cloud hosted service to run python code and is based on the Jupyter Notebook architecture. It also contains a connected CPU and GPU runtime with limits based on user tier( free,paid subscription).
+# Inference 🚀
+The trained YOLOv11 model was downloaded from Google Colaboratory and can be used to detect and save licence plate images and registration number can be read from the saved license plate images using EasyOCR
